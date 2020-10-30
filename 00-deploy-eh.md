@@ -1,4 +1,4 @@
-# Deploy Event Hubs
+# Deploy Azure Event Hubs
 
 ## Create an Event Hub namespace
 
