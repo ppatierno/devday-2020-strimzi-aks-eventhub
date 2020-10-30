@@ -34,10 +34,12 @@ az aks get-credentials --resource-group strimzigroup --name strimzicluster
 You can verify that the connection with the Kubernetes cluster is working by running the `kubectl get nodes` command to show all the available nodes in the cluster:
 
 ```shell
-NAME                                STATUS   ROLES   AGE   VERSION
-aks-nodepool1-24085136-vmss000000   Ready    agent   82s   v1.15.5
-aks-nodepool1-24085136-vmss000001   Ready    agent   88s   v1.15.5
-aks-nodepool1-24085136-vmss000002   Ready    agent   84s   v1.15.5
+kubectl get nodes
+
+NAME                                STATUS   ROLES   AGE     VERSION
+aks-nodepool1-24085136-vmss000000   Ready    agent   2m18s   v1.18.8
+aks-nodepool1-24085136-vmss000001   Ready    agent   2m14s   v1.18.8
+aks-nodepool1-24085136-vmss000002   Ready    agent   2m21s   v1.18.8
 ```
 
 ## Delete the cluster

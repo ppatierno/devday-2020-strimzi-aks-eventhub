@@ -49,14 +49,15 @@ Finally, in order to access the Kafka brokers from outside the Kubernetes cluste
 ```shell
 kubectl get service -n strimzi-demo
 
-NAME                                  TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)                               AGE
-my-cluster-kafka-0                    LoadBalancer   10.0.75.134    52.155.237.252   9094:32276/TCP                        4m42s
-my-cluster-kafka-1                    LoadBalancer   10.0.160.65    52.155.236.155   9094:31355/TCP                        4m42s
-my-cluster-kafka-2                    LoadBalancer   10.0.183.136   52.158.124.239   9094:30768/TCP                        4m42s
-my-cluster-kafka-bootstrap            ClusterIP      10.0.70.125    <none>           9091/TCP,9092/TCP,9093/TCP,9404/TCP   4m42s
-my-cluster-kafka-brokers              ClusterIP      None           <none>           9091/TCP,9092/TCP,9093/TCP            4m42s
-my-cluster-zookeeper-client           ClusterIP      10.0.94.120    <none>           9404/TCP,2181/TCP                     6m31s
-my-cluster-zookeeper-nodes            ClusterIP      None           <none>           2181/TCP,2888/TCP,3888/TCP            6m31s
+NAME                                  TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)                      AGE
+my-cluster-kafka-0                    LoadBalancer   10.0.158.171   20.54.36.121    9094:32111/TCP               7m55s
+my-cluster-kafka-1                    LoadBalancer   10.0.254.115   20.191.55.126   9094:32706/TCP               7m55s
+my-cluster-kafka-2                    LoadBalancer   10.0.24.72     20.54.32.206    9094:31298/TCP               7m55s
+my-cluster-kafka-bootstrap            ClusterIP      10.0.10.67     <none>          9091/TCP,9092/TCP,9093/TCP   7m55s
+my-cluster-kafka-brokers              ClusterIP      None           <none>          9091/TCP,9092/TCP,9093/TCP   7m55s
+my-cluster-kafka-external-bootstrap   LoadBalancer   10.0.199.31    20.54.37.57     9094:31919/TCP               7m55s
+my-cluster-zookeeper-client           ClusterIP      10.0.122.186   <none>          2181/TCP                     9m52s
+my-cluster-zookeeper-nodes            ClusterIP      None           <none>          2181/TCP,2888/TCP,3888/TCP   9m52s
 ```
 
 Each Kafka broker has an external address provided via a `LoadBalancer` service.

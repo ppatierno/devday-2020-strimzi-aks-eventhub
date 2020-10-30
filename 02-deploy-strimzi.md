@@ -19,11 +19,11 @@ The OLM component together with the operators catalog will run in the new `olm` 
 kubectl get pods -n olm
 
 NAME                                READY   STATUS    RESTARTS   AGE
-catalog-operator-7c765f678d-sc9js   1/1     Running   0          2m37s
-olm-operator-5fd5c7dd97-s7qzw       1/1     Running   0          2m37s
-operatorhubio-catalog-h4vmt         1/1     Running   0          2m25s
-packageserver-58d86869bf-4tpp4      1/1     Running   0          2m22s
-packageserver-58d86869bf-8hhpf      1/1     Running   0          2m12s
+catalog-operator-66d58f7877-wjvps   1/1     Running   0          97s
+olm-operator-5f75dd4c6c-b4mc6       1/1     Running   0          97s
+operatorhubio-catalog-wd2ww         1/1     Running   0          86s
+packageserver-6bc86b98f9-4kn4w      1/1     Running   0          71s
+packageserver-6bc86b98f9-nqn5t      1/1     Running   0          84s
 ```
 
 ## Install the Strimzi operator
