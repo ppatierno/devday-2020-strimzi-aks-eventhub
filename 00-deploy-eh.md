@@ -8,3 +8,9 @@ This event hub has to have the Kafka protocol enabled (see `--enable-kafka true`
 ```shell
 az eventhubs namespace create --name devday2020eh --resource-group strimzigroup --location northeurope --enable-kafka true
 ```
+
+When you want to clean up and delete the Event Hub namespace, just run:
+
+```shell
+az eventhubs namespace delete --name devday2020eh --resource-group strimzigroup
+```
