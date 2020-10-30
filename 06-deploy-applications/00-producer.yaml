@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: devday2020-producer
+  name: devday2020-producer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devday2020-producer
+  template:
+    metadata:
+      labels:
+        app: devday2020-producer
+    spec:
+      containers:
+        - name: devday2020-producer
+          image: strimzi/hello-world-producer:latest
+          env:
+            - name: BOOTSTRAP_SERVERS
+              value: my-cluster-kafka-bootstrap:9092
+            - name: TOPIC
+              value: devday2020-topic
+            - name: DELAY_MS
+              value: "1000"
+            - name: LOG_LEVEL
+              value: "INFO"
+            - name: MESSAGE_COUNT
+              value: "1000000"
+            - name: MESSAGE
+              value: "Hello DevDay 2020!!"
+            - name: PRODUCER_ACKS
+              value: "all"
