@@ -13,10 +13,12 @@ public class EventHubConsumer {
 
     public static void main(String[] args) throws Exception {
 
+        EventHubConsumerConfig config = EventHubConsumerConfig.fromEnv();
+
         log.info("EventHubConsumer starting ...");
         EventProcessorClient eventProcessorClient = new EventProcessorClientBuilder()
-                .consumerGroup("$Default")
-                .connectionString("Endpoint=sb://<eventhubs-namespace>.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=<access-key>;EntityPath=my-cluster.devday2020-topic")
+                .consumerGroup(config.getConsumerGroup())
+                .connectionString(config.getConnectionString())
                 .checkpointStore(new SampleCheckpointStore())
                 .processEvent(eventContext -> {
                     log.info("Message: value={}, partitionId={}, sequenceNr={}",
