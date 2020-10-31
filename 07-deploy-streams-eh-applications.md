@@ -10,10 +10,10 @@ Just run the following command from the current repository root directory.
 mvn package
 ```
 
-Finally, start the Event Hub consumer application running the following command.
+Finally, set the `CONNECTION_STRING` environment variable in the `azure-eh-consumer.sh` shell script and run it for starting the Event Hub consumer application.
 
 ```shell
-java -jar azure-eh-consumer/target/azure-eh-consumer.jar
+./azure-eh-consumer/azure-eh-consumer.sh
 ```
 
 ## Deploy Kafka streams application
