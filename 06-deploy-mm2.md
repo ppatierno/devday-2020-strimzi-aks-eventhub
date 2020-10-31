@@ -15,6 +15,7 @@ stringData:
 ```
 
 The Kafka Mirror Maker 2 instance is deployed via the Strimzi cluster operator through a corresponding `KafkaMirrorMaker2` resource.
+It is configured to mirror only the interested topic and not the internal one.
 It is provided by the `05-deploy-mm2/01-kafka-mirror-maker-2-to-eh.yaml` file and it contains the Event Hub namespace that has to be customized.
 
 ```shell

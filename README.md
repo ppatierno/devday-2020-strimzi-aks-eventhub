@@ -12,4 +12,4 @@ Demo session at DevDay 2020 "Strimzi: running your Apache Kafka cluster on Kuber
 * 04 - [Topic creation](04-topics-creation.md)
 * 05 - [Deploy Internal Applications](05-deploy-internal-applications.md)
 * 06 - [Deploy Kafka Mirror Maker 2](06-deploy-mm2.md)
-* 07 - [Deploy applications](07-deploy-applications.md)
+* 07 - [Deploy applications](07-deploy-streams-eh-applications.md)

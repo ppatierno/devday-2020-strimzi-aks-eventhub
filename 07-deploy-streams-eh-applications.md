@@ -18,14 +18,13 @@ java -jar azure-eh-consumer/target/azure-eh-consumer.jar
 
 ## Deploy Kafka streams application
 
-The Kafka Streams application process the messages on the internal topic and produce a corresponding message on the mirrored one.
+The Kafka Streams application processes the messages on the internal topic and produce a corresponding message on the mirrored one.
 It has to be deployed on the Kubernetes cluster alongside the Apache Kafka cluster.
 
  ```shell
-kubectl apply -f 07-deploy-applications -n strimzi-demo
+kubectl apply -f 07-deploy-streams-eh-applications -n strimzi-demo
 ```
 
-It starts sending messages with at a fixed rate to the topic.
 The messages are mirrored to the Event Hub and the same messages are received by the corresponding Event Hub consumer.
 
 ```shell
