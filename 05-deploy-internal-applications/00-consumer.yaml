@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: devday2020-consumer
+  name: devday2020-consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devday2020-consumer
+  template:
+    metadata:
+      labels:
+        app: devday2020-consumer
+    spec:
+      containers:
+        - name: devday2020-consumer
+          image: strimzi/hello-world-consumer:latest
+          env:
+            - name: BOOTSTRAP_SERVERS
+              value: my-cluster-kafka-bootstrap:9092
+            - name: TOPIC
+              value: internal-topic
+            - name: GROUP_ID
+              value: devday2020-consumer
+            - name: LOG_LEVEL
+              value: "INFO"
+            - name: MESSAGE_COUNT
+              value: "1000000"

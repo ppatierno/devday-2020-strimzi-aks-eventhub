@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: devday2020-streams
+  name: devday2020-streams
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devday2020-streams
+  template:
+    metadata:
+      labels:
+        app: devday2020-streams
+    spec:
+      containers:
+        - name: devday2020-streams
+          image: strimzi/hello-world-streams:latest
+          env:
+            - name: BOOTSTRAP_SERVERS
+              value: my-cluster-kafka-bootstrap:9092
+            - name: APPLICATION_ID
+              value: devday2020-streams
+            - name: SOURCE_TOPIC
+              value: internal-topic
+            - name: TARGET_TOPIC
+              value: devday2020-topic
+            - name: LOG_LEVEL
+              value: "INFO"

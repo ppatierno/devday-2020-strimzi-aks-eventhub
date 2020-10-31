@@ -18,5 +18,5 @@ The Kafka Mirror Maker 2 instance is deployed via the Strimzi cluster operator t
 It is provided by the `05-deploy-mm2/01-kafka-mirror-maker-2-to-eh.yaml` file and it contains the Event Hub namespace that has to be customized.
 
 ```shell
-kubectl apply -f 05-deploy-mm2 -n strimzi-demo
+kubectl apply -f 06-deploy-mm2 -n strimzi-demo
 ```

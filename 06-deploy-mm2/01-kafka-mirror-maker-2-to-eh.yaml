@@ -39,5 +39,5 @@ spec:
     checkpointConnector:
       config:
         checkpoints.topic.replication.factor: 1
-    topicsPattern: ".*"
+    topicsPattern: "devday2020-.*"
     groupsPattern: ".*"
