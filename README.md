@@ -2,6 +2,8 @@
 
 Demo session at DevDay 2020 "Strimzi: running your Apache Kafka cluster on Kubernetes"
 
+![Kafka Mirror Maker2 to Event Hub](images/streams_mm2_eh.png)
+
 ## Modules
 
 * 00 - [Deploy Azure Kubernetes Service](00-deploy-aks.md)
