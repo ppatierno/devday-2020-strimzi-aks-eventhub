@@ -5,8 +5,7 @@ ifndef ACCESS_KEY
 $(error ACCESS_KEY is not set)
 endif
 
-#.PHONY: patch-eh
-patch:
+patch-eh:
 	sed -i 's/<eventhubs-namespace>/$(EVENTHUBS_NAMESPACE)/' ./azure-eh-consumer/azure-eh-consumer.sh
 	sed -i 's/<access-key-name>/$(ACCESS_KEY_NAME)/' ./azure-eh-consumer/azure-eh-consumer.sh
 	sed -i 's/<access-key>/$(ACCESS_KEY)/' ./azure-eh-consumer/azure-eh-consumer.sh
