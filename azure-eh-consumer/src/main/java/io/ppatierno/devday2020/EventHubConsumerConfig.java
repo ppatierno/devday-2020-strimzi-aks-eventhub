@@ -7,7 +7,7 @@ public class EventHubConsumerConfig {
 
     public final static String DEFAULT_CONSUMER_GROUP = "$Default";
 
-    // Endpoint=sb://<eventhubs-namespace>.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=<access-key>;EntityPath=my-cluster.devday2020-topic
+    // Endpoint=sb://<eventhubs-namespace>.servicebus.windows.net/;SharedAccessKeyName=<access-key-name>;SharedAccessKey=<access-key>;EntityPath=my-cluster.devday2020-topic
     private final String connectionString;
     private final String consumerGroup;
 
