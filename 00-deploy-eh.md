@@ -14,3 +14,12 @@ When you want to clean up and delete the Event Hub namespace, just run:
 ```shell
 az eventhubs namespace delete --name devday2020eh --resource-group strimzigroup
 ```
+
+After creating the Event Hubs namespace, get the shared access key name and value used for connecting to it.
+Set the `ACCESS_KEY_NAME` and `ACCESS_KEY` environment variables with these values and run the following `make` command.
+
+```shell
+make patch-eh
+```
+
+> the Event Hubs namespace will be `devday2020eh` by default. You can change that setting the `EVENTHUBS_NAMESPACE` environment variable. 
