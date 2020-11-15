@@ -14,11 +14,7 @@ spec:
       - name: tls
         port: 9093
         type: internal
-        tls: true
-      - name: external
-        port: 9094
-        type: loadbalancer
-        tls: false        
+        tls: true   
     config:
       offsets.topic.replication.factor: 3
       transaction.state.log.replication.factor: 3
