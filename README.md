@@ -2,7 +2,8 @@
 
 Demo session at DevDay 2020 "Strimzi: running your Apache Kafka cluster on Kubernetes"
 
-Slides deck is available [here](https://www2.slideshare.net/paolopat/strimzi-running-your-apache-kafka-cluster-on-kubernetes)
+* [Slides deck](https://www2.slideshare.net/paolopat/strimzi-running-your-apache-kafka-cluster-on-kubernetes)
+* [Video recording](https://www.youtube.com/watch?v=RyJqt139I94&feature=youtu.be&t=17066)
 
 ![Kafka Mirror Maker2 to Event Hub](images/streams_mm2_eh.png)
 
