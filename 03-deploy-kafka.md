@@ -44,24 +44,18 @@ They are bound to Azure Disks that are deployed for you in the same resource gro
 
 > For check the Azure Disks use the `az disk list` command.
 
-Finally, in order to access the Kafka brokers from outside the Kubernetes cluster, thanks to the external listener declaration using `LoadBalancer` as a type, the following services are created by the operator.
+Finally, in order to access the Kafka brokers, from inside the Kubernetes cluster, the following "bootstrap" service is created by the operator.
+This "bootstrap" service is used for the first connection from clients.
 
 ```shell
 kubectl get service -n strimzi-demo
 
 NAME                                  TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)                      AGE
-my-cluster-kafka-0                    LoadBalancer   10.0.158.171   20.54.36.121    9094:32111/TCP               7m55s
-my-cluster-kafka-1                    LoadBalancer   10.0.254.115   20.191.55.126   9094:32706/TCP               7m55s
-my-cluster-kafka-2                    LoadBalancer   10.0.24.72     20.54.32.206    9094:31298/TCP               7m55s
 my-cluster-kafka-bootstrap            ClusterIP      10.0.10.67     <none>          9091/TCP,9092/TCP,9093/TCP   7m55s
 my-cluster-kafka-brokers              ClusterIP      None           <none>          9091/TCP,9092/TCP,9093/TCP   7m55s
-my-cluster-kafka-external-bootstrap   LoadBalancer   10.0.199.31    20.54.37.57     9094:31919/TCP               7m55s
 my-cluster-zookeeper-client           ClusterIP      10.0.122.186   <none>          2181/TCP                     9m52s
 my-cluster-zookeeper-nodes            ClusterIP      None           <none>          2181/TCP,2888/TCP,3888/TCP   9m52s
 ```
-
-Each Kafka broker has an external address provided via a `LoadBalancer` service.
-There is also a "bootstrap" service used for the first connection from clients.
 
 The Kafka cluster is now available as a Kubernetes native resource.
 
