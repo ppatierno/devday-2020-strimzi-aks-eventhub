@@ -16,10 +16,10 @@ az eventhubs namespace delete --name devday2020eh --resource-group strimzigroup
 ```
 
 After creating the Event Hubs namespace, get the shared access key name and value used for connecting to it.
-Set the `ACCESS_KEY_NAME` and `ACCESS_KEY` environment variables with these values and run the following `make` command.
+Set the `SHARED_ACCESS_KEY_NAME` and `SHARED_ACCESS_KEY` environment variables with these values and run the following `make` command.
 
 ```shell
 make patch-eh
 ```
 
-> the Event Hubs namespace will be `devday2020eh` by default. You can change that setting the `EVENTHUBS_NAMESPACE` environment variable. 
+> the Event Hubs namespace will be `devday2020eh` by default. You can change that setting the `EVENTHUBS_NAMESPACE` environment variable. The `SHARED_ACCESS_KEY_NAME` will be `RootManageSharedAccessKey` by default.
